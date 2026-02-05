@@ -1,19 +1,24 @@
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     //variables
+    //movement modfiers
     public float moveSpeed;
     public Rigidbody2D body;
     private Vector2 moveDirection;
+    //player input
     public InputActionReference move;
     public InputActionReference jump;
     public InputActionReference close;
     public float jumpStrength = 15f;
+
+    //ground check variables
+    public Transform groundChkPosition;
+    public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
+    public LayerMask groundLayer;
+
 
 
 
@@ -45,25 +50,40 @@ public class PlayerMovement : MonoBehaviour
         close.action.started += Close;
 
     }
-    void playerJumping()
-    {
-        Debug.Log("jump");
-        body.linearVelocity = Vector2.up * jumpStrength;
-    }
 
-    //currently tests, runs when the buttons are pressed. 
+
+    //if the jump input is pressed, check if the player is on the ground, if so, jump. 
     private void Jump(InputAction.CallbackContext context)
     {
-
-        playerJumping();
-
+        if (isGrounded())
+        {
+            body.linearVelocity = Vector2.up * jumpStrength;
+        }
     }
 
     private void Close(InputAction.CallbackContext context)
     {
         Debug.Log("close game");
+        Application.Quit();
     }
 
+
+
+    private bool isGrounded()
+    {
+        if(Physics2D.OverlapBox(groundChkPosition.position, groundCheckSize, 0, groundLayer))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    //allows team to see the grounded check volume
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireCube(groundChkPosition.position, groundCheckSize);
+    //}
 
 
 }
