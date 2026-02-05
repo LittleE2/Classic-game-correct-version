@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &126604644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 126604645}
+  m_Layer: 0
+  m_Name: floorChk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &126604645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126604644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.3051, z: 0}
+  m_LocalScale: {x: 100, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 532671858}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &376027382
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +161,7 @@ GameObject:
   - component: {fileID: 376027384}
   - component: {fileID: 376027383}
   - component: {fileID: 376027385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor
   m_TagString: solidGround
   m_Icon: {fileID: 0}
@@ -432,6 +463,11 @@ MonoBehaviour:
   jump: {fileID: 5191359553856968962, guid: a50839578be311f4ea602cf4690465e3, type: 3}
   close: {fileID: 8731075755438202132, guid: a50839578be311f4ea602cf4690465e3, type: 3}
   jumpStrength: 27
+  groundChkPosition: {fileID: 126604645}
+  groundCheckSize: {x: 1.3, y: 0.05}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!61 &532671855
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -442,7 +478,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f306218d876aff9468fe71183c42cc9d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -494,7 +530,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f306218d876aff9468fe71183c42cc9d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -575,7 +611,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 126604645}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &532671859
@@ -703,7 +740,7 @@ GameObject:
   - component: {fileID: 1381509125}
   - component: {fileID: 1381509124}
   - component: {fileID: 1381509123}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform
   m_TagString: solidGround
   m_Icon: {fileID: 0}
