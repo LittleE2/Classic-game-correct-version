@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -19,12 +20,23 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
 
+    //health variables
+    public int maxHealth = 4;
+    private int currentHealth;
 
+    public Slider healthSlider;
 
 
     void Start()
     {
+        // Set starting health
+        currentHealth = maxHealth;
 
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = currentHealth;
+        }
     }
 
     void Update()
@@ -67,8 +79,8 @@ public class PlayerMovement : MonoBehaviour
         Application.Quit();
     }
 
-
-
+    
+    //checks if player is grounded
     private bool isGrounded()
     {
         if(Physics2D.OverlapBox(groundChkPosition.position, groundCheckSize, 0, groundLayer))
@@ -77,6 +89,37 @@ public class PlayerMovement : MonoBehaviour
         }
         return false;
     }
+
+    //activates if player enters specific triggers
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("hit");
+        if (other.CompareTag("enemy"))
+        {
+            TakeDamage(1);
+        }
+    }
+
+
+    //player health
+    public void TakeDamage(int damageTaken)
+    {
+        currentHealth -= damageTaken;
+        Debug.Log("Player has taken damage");
+
+        if(healthSlider != null)
+        {
+            healthSlider.value = currentHealth;
+        }
+        if(currentHealth <= 0)
+        {
+            Debug.Log("player has died");
+            Destroy(gameObject);
+        }
+    }
+
+
+
 
     //allows team to see the grounded check volume
     //private void OnDrawGizmosSelected()
