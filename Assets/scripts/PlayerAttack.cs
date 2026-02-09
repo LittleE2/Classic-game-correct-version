@@ -5,6 +5,8 @@ public class playerAttack : MonoBehaviour
 {
 
     public InputActionReference Punch;
+    public InputActionReference Kick;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,11 +17,17 @@ public class playerAttack : MonoBehaviour
     void Update()
     {
        Punch.action.started += fAttack;
+       Kick.action.started += vAttack;
     }
 
 
     private void fAttack(InputAction.CallbackContext context)
     {
-        Debug.Log("attack!");
+        Debug.Log("Punch!");
+    }
+
+    private void vAttack(InputAction.CallbackContext context)
+    {
+        Debug.Log("Kick!");
     }
 }

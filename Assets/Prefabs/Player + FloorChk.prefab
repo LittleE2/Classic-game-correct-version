@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerAttack
   Punch: {fileID: -2825882983576771068, guid: a50839578be311f4ea602cf4690465e3, type: 3}
+  Kick: {fileID: -5313373677785380151, guid: a50839578be311f4ea602cf4690465e3, type: 3}
 --- !u!1 &9164330428444976898
 GameObject:
   m_ObjectHideFlags: 0
