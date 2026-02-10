@@ -582,6 +582,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &754485611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6918559471384385018, guid: 24c59ae57f49c2348a9b055a414e4f24, type: 3}
+  m_PrefabInstance: {fileID: 6370092449270331573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!210 &754485618
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754485611}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1381509122
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +944,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2970099900941902016, guid: 24c59ae57f49c2348a9b055a414e4f24, type: 3}
+      propertyPath: pieces
+      value: 
+      objectReference: {fileID: 7851786732700929424, guid: ba889210a2445304db86825c12837513, type: 3}
     - target: {fileID: 6918559471384385018, guid: 24c59ae57f49c2348a9b055a414e4f24, type: 3}
       propertyPath: m_Name
       value: Car
@@ -934,7 +955,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6918559471384385018, guid: 24c59ae57f49c2348a9b055a414e4f24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 754485618}
   m_SourcePrefab: {fileID: 100100000, guid: 24c59ae57f49c2348a9b055a414e4f24, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
