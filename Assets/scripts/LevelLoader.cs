@@ -25,4 +25,16 @@ public class LevelLoader : MonoBehaviour
 
         SceneManager.LoadScene(levelIndex);
     }
+
+    public void QuitGame()
+    {
+        StartCoroutine(QuitAfterTransition());
+    }
+
+    IEnumerator QuitAfterTransition()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSecondsRealtime(transitionTime);
+        Application.Quit();
+    }
 }
