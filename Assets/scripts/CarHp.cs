@@ -8,6 +8,8 @@ public class CarHp : MonoBehaviour
     public Sprite sprite2;
     public Sprite sprite3;
 
+    public GameObject pieces;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +28,9 @@ public class CarHp : MonoBehaviour
     {
         currentCarHealth -= damageTaken;
         Debug.Log("Current car hp: " + currentCarHealth);
+
+        GameObject fallingOff = Instantiate(pieces, (transform.position + new Vector3(0f, 2.16f, 0)), Quaternion.identity);
+        Destroy(fallingOff,1.5f);
 
 
         if (currentCarHealth <= 0)
