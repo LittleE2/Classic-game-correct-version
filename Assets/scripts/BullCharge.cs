@@ -12,9 +12,7 @@ public class BullCharge : MonoBehaviour
     // -1 = right ? left
     private int direction = 1;
 
-    /// <summary>
     /// Called by the spawner to set which way the bull runs.
-    /// </summary>
     public void SetDirection(int newDirection)
     {
         direction = Mathf.Clamp(newDirection, -1, 1);

@@ -30,7 +30,7 @@ public class AvoidedProgression : MonoBehaviour
         bullsAvoided++;
         UpdateUI();
 
-        Debug.Log($"Bulls avoided: {bullsAvoided}/{bullsToAvoid}");
+        Debug.Log($"Survive the Ducks: {bullsAvoided}/{bullsToAvoid}");
 
         if (bullsAvoided >= bullsToAvoid)
         {
