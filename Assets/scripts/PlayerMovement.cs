@@ -114,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
+            //player death, set up game over screen. 
             Debug.Log("player has died");
             Destroy(gameObject);
         }
