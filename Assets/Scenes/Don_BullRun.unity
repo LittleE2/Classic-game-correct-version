@@ -1260,6 +1260,14 @@ PrefabInstance:
       propertyPath: move
       value: 
       objectReference: {fileID: 3688370849028922600, guid: a50839578be311f4ea602cf4690465e3, type: 3}
+    - target: {fileID: 1985435283950582788, guid: d8b1d10cb80c07243a6fe94613ae86f3, type: 3}
+      propertyPath: kickingPrefab
+      value: 
+      objectReference: {fileID: 3754626915675087560, guid: 500b4568b877cd740bb08916acf7dee3, type: 3}
+    - target: {fileID: 1985435283950582788, guid: d8b1d10cb80c07243a6fe94613ae86f3, type: 3}
+      propertyPath: punchingPrefab
+      value: 
+      objectReference: {fileID: 893050368017726894, guid: 9c548d560120fe14aa68c720bbeec35d, type: 3}
     - target: {fileID: 4017505549928386512, guid: d8b1d10cb80c07243a6fe94613ae86f3, type: 3}
       propertyPath: healthSlider
       value: 
