@@ -35,6 +35,8 @@ public class CarHp : MonoBehaviour
 
         if (currentCarHealth <= 0)
         {
+        //car has died, instert win screen. 
+           
             Debug.Log("car has died");
             Destroy(gameObject);
         }
