@@ -26,6 +26,8 @@ public class BullSpawner : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("BullSpawner Update Running");
+
         timer += Time.deltaTime;
 
         if (timer >= spawnInterval)

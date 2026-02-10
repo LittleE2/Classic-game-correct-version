@@ -32,9 +32,26 @@ public class BullCharge : MonoBehaviour
 
         // Despawn when far off-screen
         if (direction == 1 && transform.position.x > despawnX)
+        {
+            NotifyAvoided();
             Destroy(gameObject);
+        }
 
         if (direction == -1 && transform.position.x < -despawnX)
+        { 
+            NotifyAvoided();
             Destroy(gameObject);
+        }
     }
+
+    void NotifyAvoided()
+    {
+        AvoidedProgression progression = FindFirstObjectByType<AvoidedProgression>();
+
+        if (progression != null)
+        {
+            progression.RegisterBullAvoided();
+        }
+    }
+
 }
