@@ -26,6 +26,8 @@ public class playerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //finds the last move direction of the player (is the player looking right or left)
         moveDirection = move.action.ReadValue<Vector2>();
         directionChange = moveDirection.x;
 
@@ -34,7 +36,12 @@ public class playerAttack : MonoBehaviour
             attackDirection = directionChange;
 
         }
-        Debug.Log(attackDirection);
+        //Debug.Log(attackDirection);
+
+
+
+
+
         Punch.action.started += fAttack;
         Kick.action.started += vAttack;
     }
@@ -42,12 +49,15 @@ public class playerAttack : MonoBehaviour
 
     private void fAttack(InputAction.CallbackContext context)
     {
+        GameObject punch = Instantiate(punchingPrefab, (transform.position + new Vector3(attackDirection, 1,0)), Quaternion.identity);
 
         Debug.Log("Punch!");
     }
 
     private void vAttack(InputAction.CallbackContext context)
     {
+        GameObject kick = Instantiate(kickingPrefab, (transform.position + new Vector3(attackDirection, -1, 0)), Quaternion.identity);
+
         Debug.Log("Kick!");
     }
 }
