@@ -26,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Slider healthSlider;
 
+    // ===== ADDED (Game Over) =====
+    public LevelLoader levelLoader;
+    public int gameOverSceneIndex = 3;
+    private bool isDead = false;
+    // =============================
 
     void Start()
     {
@@ -42,11 +47,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Debug.Log(moveDirection.x);
+        if (isDead) return;
+
         movement();
-
     }
-
-
 
     //handles player movement
     void movement()
@@ -61,13 +65,13 @@ public class PlayerMovement : MonoBehaviour
 
         //close game
         close.action.started += Close;
-
     }
-
 
     //if the jump input is pressed, check if the player is on the ground, if so, jump. 
     private void Jump(InputAction.CallbackContext context)
     {
+        if (isDead) return;
+
         if (isGrounded())
         {
             body.linearVelocity = Vector2.up * jumpStrength;
@@ -79,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("close game");
         Application.Quit();
     }
-
 
     //checks if player is grounded
     private bool isGrounded()
@@ -95,12 +98,13 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("hit");
+        if (isDead) return;
+
         if (other.CompareTag("enemy"))
         {
             TakeDamage(1);
         }
     }
-
 
     //player health
     public void TakeDamage(int damageTaken)
@@ -112,16 +116,25 @@ public class PlayerMovement : MonoBehaviour
         {
             healthSlider.value = currentHealth;
         }
-        if (currentHealth <= 0)
+
+        if (currentHealth <= 0 && !isDead)
         {
             //player death, set up game over screen. 
             Debug.Log("player has died");
-            Destroy(gameObject);
+            isDead = true;
+
+            body.linearVelocity = Vector2.zero;
+
+            if (levelLoader != null)
+            {
+                levelLoader.LoadLevelByIndex(gameOverSceneIndex);
+            }
+            else
+            {
+                Debug.LogError("LevelLoader not assigned on PlayerMovement");
+            }
         }
     }
-
-
-
 
     //allows team to see the grounded check volume
     //private void OnDrawGizmosSelected()
@@ -129,6 +142,4 @@ public class PlayerMovement : MonoBehaviour
     //    Gizmos.color = Color.yellow;
     //    Gizmos.DrawWireCube(groundChkPosition.position, groundCheckSize);
     //}
-
-
 }
