@@ -26,7 +26,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Slider healthSlider;
 
-
+    //animations 
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
+    private float XPosLastFrame;
     void Start()
     {
         // Set starting health
@@ -43,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Debug.Log(moveDirection.x);
         movement();
-
+        FlipCharacterX();
     }
 
 
@@ -51,8 +54,16 @@ public class PlayerMovement : MonoBehaviour
     //handles player movement
     void movement()
     {
-        //left to right movement, reads the input and passes it into move direction which determines left or right, and multiplies by move speed. 
-        moveDirection = move.action.ReadValue<Vector2>();
+        if (body.linearVelocityX!=0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+            //left to right movement, reads the input and passes it into move direction which determines left or right, and multiplies by move speed. 
+            moveDirection = move.action.ReadValue<Vector2>();
         body.linearVelocityX = moveDirection.x * moveSpeed;
 
         //jump
@@ -63,7 +74,18 @@ public class PlayerMovement : MonoBehaviour
         close.action.started += Close;
 
     }
-
+    private void FlipCharacterX()
+    {
+        if (transform.position.x > XPosLastFrame)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (transform.position.x < XPosLastFrame)
+        {
+            spriteRenderer.flipX = true;
+        }
+        XPosLastFrame = transform.position.x;
+    }
 
     //if the jump input is pressed, check if the player is on the ground, if so, jump. 
     private void Jump(InputAction.CallbackContext context)
