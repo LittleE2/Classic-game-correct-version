@@ -29,12 +29,14 @@ public class CarHp : MonoBehaviour
         currentCarHealth -= damageTaken;
         Debug.Log("Current car hp: " + currentCarHealth);
 
-        GameObject fallingOff = Instantiate(pieces, (transform.position + new Vector3(0f, 2.16f, 0)), Quaternion.identity);
+        GameObject fallingOff = Instantiate(pieces, (transform.position + new Vector3(0f, 2f, 0)), Quaternion.identity);
         Destroy(fallingOff,1.5f);
 
 
         if (currentCarHealth <= 0)
         {
+        //car has died, instert win screen. 
+           
             Debug.Log("car has died");
             Destroy(gameObject);
         }
