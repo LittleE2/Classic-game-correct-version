@@ -6,13 +6,17 @@ public class AttackImpact : MonoBehaviour
     {
        
     }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //checks if hits the car, prints statements, deletes immediatly. 
         if (other.CompareTag("Car"))
         {
-            Debug.Log("Punch hit something: " + other.gameObject.name);
-
-            Debug.Log("hitcar");
+            Debug.Log("attack hit something: " + other.gameObject.name);
+            Destroy(gameObject);
         }
+        //destroys after 1 second
+        Destroy(gameObject, 1f);
     }
 }
