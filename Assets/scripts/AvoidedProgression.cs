@@ -42,7 +42,7 @@ public class AvoidedProgression : MonoBehaviour
     {
         if (progressText != null)
         {
-            progressText.text = $"Bulls Avoided: {bullsAvoided} / {bullsToAvoid}";
+            progressText.text = $"Survive the Ducks: {bullsAvoided} / {bullsToAvoid}";
         }
     }
 }

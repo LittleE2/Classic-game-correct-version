@@ -1269,6 +1269,10 @@ PrefabInstance:
       propertyPath: pieces
       value: 
       objectReference: {fileID: 7851786732700929424, guid: ba889210a2445304db86825c12837513, type: 3}
+    - target: {fileID: 2970099900941902016, guid: 24c59ae57f49c2348a9b055a414e4f24, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 86649530}
     - target: {fileID: 6918559471384385018, guid: 24c59ae57f49c2348a9b055a414e4f24, type: 3}
       propertyPath: m_Name
       value: Car
