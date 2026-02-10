@@ -51,13 +51,13 @@ public class playerAttack : MonoBehaviour
     {
         GameObject punch = Instantiate(punchingPrefab, (transform.position + new Vector3(attackDirection, 1,0)), Quaternion.identity);
 
-        Debug.Log("Punch!");
+        //Debug.Log("Punch!");
     }
 
     private void vAttack(InputAction.CallbackContext context)
     {
         GameObject kick = Instantiate(kickingPrefab, (transform.position + new Vector3(attackDirection, -1, 0)), Quaternion.identity);
 
-        Debug.Log("Kick!");
+        //Debug.Log("Kick!");
     }
 }

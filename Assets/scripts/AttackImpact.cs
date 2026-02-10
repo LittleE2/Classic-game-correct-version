@@ -13,7 +13,7 @@ public class AttackImpact : MonoBehaviour
         //checks if hits the car, prints statements, deletes immediatly. 
         if (other.CompareTag("Car"))
         {
-            Debug.Log("attack hit something: " + other.gameObject.name);
+           // Debug.Log("attack hit something: " + other.gameObject.name);
             Destroy(gameObject);
         }
         //destroys after 1 second
