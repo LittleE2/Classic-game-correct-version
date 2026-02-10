@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     //activates if player enters specific triggers
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hit");
+        //Debug.Log("hit");
         if (other.CompareTag("enemy"))
         {
             TakeDamage(1);
