@@ -10,12 +10,15 @@ public class CarHp : MonoBehaviour
 
     public GameObject pieces;
 
+    // Win Screen
+    public LevelLoader levelLoader;
+    public int winSceneIndex = 4; // set this to your Win scene index
+    private bool hasWon = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentCarHealth = CarMaxHealth;
-
     }
 
     // Update is called once per frame
@@ -30,27 +33,34 @@ public class CarHp : MonoBehaviour
         Debug.Log("Current car hp: " + currentCarHealth);
 
         GameObject fallingOff = Instantiate(pieces, (transform.position + new Vector3(0f, 2f, 0)), Quaternion.identity);
-        Destroy(fallingOff,1.5f);
+        Destroy(fallingOff, 1.5f);
 
-
-        if (currentCarHealth <= 0)
+        if (currentCarHealth <= 0 && !hasWon)
         {
-        //car has died, instert win screen. 
-           
+            //car has died, instert win screen. 
             Debug.Log("car has died");
+            hasWon = true;
+
+            if (levelLoader != null)
+            {
+                levelLoader.LoadLevelByIndex(winSceneIndex);
+            }
+            else
+            {
+                Debug.LogError("LevelLoader not assigned on CarHp");
+            }
+
             Destroy(gameObject);
         }
-
 
         if (currentCarHealth == 5)
         {
             ChangeSprite(sprite2);
-
         }
+
         if (currentCarHealth == 2)
         {
             ChangeSprite(sprite3);
-
         }
     }
 
