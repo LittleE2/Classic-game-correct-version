@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     //variables
     //movement modfiers
     public float moveSpeed;
@@ -53,19 +54,23 @@ public class PlayerMovement : MonoBehaviour
         //left to right movement, reads the input and passes it into move direction which determines left or right, and multiplies by move speed. 
         moveDirection = move.action.ReadValue<Vector2>();
         body.linearVelocityX = moveDirection.x * moveSpeed;
-
+        if (body.linearVelocityX != 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
         //jump
         jump.action.started += Jump;
         body.freezeRotation = true;
-
         //close game
         close.action.started += Close;
-
     }
 
-
     //if the jump input is pressed, check if the player is on the ground, if so, jump. 
-    private void Jump(InputAction.CallbackContext context)
+    public void Jump(InputAction.CallbackContext context)
     {
         if (isGrounded())
         {
@@ -73,7 +78,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Close(InputAction.CallbackContext context)
+    
+    
+    public void Close(InputAction.CallbackContext context)
     {
         Debug.Log("close game");
         Application.Quit();
@@ -81,13 +88,13 @@ public class PlayerMovement : MonoBehaviour
 
 
     //checks if player is grounded
-    private bool isGrounded()
+    public bool isGrounded()
     {
         if (Physics2D.OverlapBox(groundChkPosition.position, groundCheckSize, 0, groundLayer))
         {
             return true;
         }
-        return false;
+            return false;
     }
 
     //activates if player enters specific triggers
@@ -102,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     //player health
-    public void TakeDamage(int damageTaken)
+    private void TakeDamage(int damageTaken)
     {
         currentHealth -= damageTaken;
         Debug.Log("Player has taken damage");
@@ -117,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+}
 
 
 
@@ -127,6 +134,3 @@ public class PlayerMovement : MonoBehaviour
     //    Gizmos.color = Color.yellow;
     //    Gizmos.DrawWireCube(groundChkPosition.position, groundCheckSize);
     //}
-
-
-}
