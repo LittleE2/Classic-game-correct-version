@@ -4,151 +4,130 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
-
+    //variables
+    //movement modfiers
     public float moveSpeed;
     public Rigidbody2D body;
     private Vector2 moveDirection;
-
+    //player input
     public InputActionReference move;
     public InputActionReference jump;
     public InputActionReference close;
     public float jumpStrength = 15f;
 
+    //ground check variables
     public Transform groundChkPosition;
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
 
+    //health variables
     public int maxHealth = 4;
     private int currentHealth;
+
     public Slider healthSlider;
-
-    //jumping anim tools (working)
-    private bool isJumping;
-    private bool wasGrounded;
-
-    //sprite direction change (test)
-    private float XPosLastFrame;
-    [SerializeField] private SpriteRenderer spriteRenderer;
 
 
     void Start()
-    {   
+    {
+        // Set starting health
         currentHealth = maxHealth;
+
         if (healthSlider != null)
         {
             healthSlider.maxValue = maxHealth;
             healthSlider.value = currentHealth;
         }
     }
-    void OnEnable()
-    {
-        jump.action.started += Jump;
-        close.action.started += Close;
-    }
-
-    void OnDisable()
-    {
-        jump.action.started -= Jump;
-        close.action.started -= Close;
-    }
 
     void Update()
     {
-        Movement();
-        FlipCharacterX();
-        bool grounded = isGrounded();
+        //Debug.Log(moveDirection.x);
+        movement();
 
-        // just left the ground
-        if (wasGrounded && !grounded)
-        {
-            isJumping = true;
-        }
-        // just landed
-        if (!wasGrounded && grounded)
-        {
-            isJumping = false;
-        }
-
-        animator.SetBool("isJumping", isJumping);
-
-        wasGrounded = grounded;
     }
-        void Movement()
+
+
+
+    //handles player movement
+    void movement()
     {
+        //left to right movement, reads the input and passes it into move direction which determines left or right, and multiplies by move speed. 
         moveDirection = move.action.ReadValue<Vector2>();
-        body.linearVelocity = new Vector2(moveDirection.x * moveSpeed, body.linearVelocity.y);
+        body.linearVelocityX = moveDirection.x * moveSpeed;
 
-        animator.SetBool("isRunning", moveDirection.x != 0);
-        animator.SetBool("isRunning", moveDirection.x != 0 && !isJumping);
-    }
-    private void FlipCharacterX ()
-    {
-    if (transform.position.x > XPosLastFrame)
-        {
-            spriteRenderer.flipX = false;
-        }
-    else if (transform.position.x < XPosLastFrame)
-        {
-            spriteRenderer.flipX= true;
-        }
-        XPosLastFrame = transform.position.x;
+        //jump
+        jump.action.started += Jump;
+        body.freezeRotation = true;
+
+        //close game
+        close.action.started += Close;
 
     }
-    public void Jump(InputAction.CallbackContext context)
+
+
+    //if the jump input is pressed, check if the player is on the ground, if so, jump. 
+    private void Jump(InputAction.CallbackContext context)
     {
         if (isGrounded())
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, jumpStrength);
-            isJumping = true;
+            body.linearVelocity = Vector2.up * jumpStrength;
         }
     }
 
-    public void Close(InputAction.CallbackContext context)
+    private void Close(InputAction.CallbackContext context)
     {
+        Debug.Log("close game");
         Application.Quit();
     }
 
-    public bool isGrounded()
+
+    //checks if player is grounded
+    private bool isGrounded()
     {
-        return Physics2D.OverlapBox(
-            groundChkPosition.position,
-            groundCheckSize,
-            0,
-            groundLayer
-        );
+        if (Physics2D.OverlapBox(groundChkPosition.position, groundCheckSize, 0, groundLayer))
+        {
+            return true;
+        }
+        return false;
     }
 
+    //activates if player enters specific triggers
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //Debug.Log("hit");
         if (other.CompareTag("enemy"))
         {
             TakeDamage(1);
         }
     }
 
-    private void TakeDamage(int damageTaken)
+
+    //player health
+    public void TakeDamage(int damageTaken)
     {
         currentHealth -= damageTaken;
+        Debug.Log("Player has taken damage");
 
         if (healthSlider != null)
         {
             healthSlider.value = currentHealth;
         }
-
         if (currentHealth <= 0)
         {
+            Debug.Log("player has died");
             Destroy(gameObject);
         }
     }
+
+
+
+
+    //allows team to see the grounded check volume
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireCube(groundChkPosition.position, groundCheckSize);
+    //}
+
+
 }
-
-
-
-
-//allows team to see the grounded check volume
-//private void OnDrawGizmosSelected()
-//{
-//    Gizmos.color = Color.yellow;
-//    Gizmos.DrawWireCube(groundChkPosition.position, groundCheckSize);
-//}

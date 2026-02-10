@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 41777e2dfa477f44a8ee9891b7e0aebc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2089414241996454100
+    second: pixil-layer-portrait_0
+  - first:
+      213: 4745802297227774969
+    second: pixil-layer-portrait_1
+  - first:
+      213: 1104799140403122203
+    second: pixil-layer-portrait_2
+  - first:
+      213: 5976705167123393929
+    second: pixil-layer-portrait_3
+  - first:
+      213: 4475626331745874263
+    second: pixil-layer-portrait_4
+  - first:
+      213: 6861016445444610013
+    second: pixil-layer-portrait_5
+  - first:
+      213: 4681666647271875667
+    second: pixil-layer-portrait_6
+  - first:
+      213: 4763151304829554389
+    second: pixil-layer-portrait_7
+  - first:
+      213: -2527396030604634642
+    second: pixil-layer-portrait_8
+  - first:
+      213: -4855484053702792
+    second: pixil-layer-portrait_9
+  - first:
+      213: 159619745375381510
+    second: pixil-layer-portrait_10
+  - first:
+      213: -8706147236374949109
+    second: pixil-layer-portrait_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixil-layer-portrait_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 644
+        width: 286
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d837d2de271ffc10800000000000000
+      internalID: 2089414241996454100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_1
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 794
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb8e748b0a7cd140800000000000000
+      internalID: 4745802297227774969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_2
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 794
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1092e7f6f8055f00800000000000000
+      internalID: 1104799140403122203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 794
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98da1adfea581f250800000000000000
+      internalID: 5976705167123393929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_4
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 794
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751f8139f6e9c1e30800000000000000
+      internalID: 4475626331745874263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_5
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 794
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7d6dc1b1a373f50800000000000000
+      internalID: 6861016445444610013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_6
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 794
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3542f6bd20f98f040800000000000000
+      internalID: 4681666647271875667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_7
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 794
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5decdcf10ec1a1240800000000000000
+      internalID: 4763151304829554389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_8
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 794
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5141d63b2ececd0800000000000000
+      internalID: -2527396030604634642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 374
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87734c586ffbeeff0800000000000000
+      internalID: -4855484053702792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_10
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 584
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608ec3e0055173200800000000000000
+      internalID: 159619745375381510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-layer-portrait_11
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 584
+        width: 17
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b035f95373d8d2780800000000000000
+      internalID: -8706147236374949109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pixil-layer-portrait_0: 2089414241996454100
+      pixil-layer-portrait_1: 4745802297227774969
+      pixil-layer-portrait_10: 159619745375381510
+      pixil-layer-portrait_11: -8706147236374949109
+      pixil-layer-portrait_2: 1104799140403122203
+      pixil-layer-portrait_3: 5976705167123393929
+      pixil-layer-portrait_4: 4475626331745874263
+      pixil-layer-portrait_5: 6861016445444610013
+      pixil-layer-portrait_6: 4681666647271875667
+      pixil-layer-portrait_7: 4763151304829554389
+      pixil-layer-portrait_8: -2527396030604634642
+      pixil-layer-portrait_9: -4855484053702792
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

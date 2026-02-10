@@ -6,6 +6,8 @@ TagManager:
   tags:
   - solidGround
   - enemy
+  - playerAttack
+  - Car
   layers:
   - Default
   - TransparentFX

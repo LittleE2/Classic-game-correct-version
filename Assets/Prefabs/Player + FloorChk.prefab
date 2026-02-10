@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5890647998921942395}
   - component: {fileID: 4017505549928386512}
   - component: {fileID: 4430796842551251177}
+  - component: {fileID: 1985435283950582788}
   m_Layer: 0
   m_Name: Player + FloorChk
   m_TagString: Untagged
@@ -191,6 +192,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  maxHealth: 4
+  healthSlider: {fileID: 0}
 --- !u!114 &4430796842551251177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +224,20 @@ MonoBehaviour:
   m_DefaultActionMap: gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1985435283950582788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057086794826578647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a729afaf3c95b96438340f7c1efb578e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::playerAttack
+  Punch: {fileID: -2825882983576771068, guid: a50839578be311f4ea602cf4690465e3, type: 3}
+  Kick: {fileID: -5313373677785380151, guid: a50839578be311f4ea602cf4690465e3, type: 3}
 --- !u!1 &9164330428444976898
 GameObject:
   m_ObjectHideFlags: 0
