@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class CarHp : MonoBehaviour
 {
-    public int CarMaxHealth = 10;
+    public int CarMaxHealth = 9;
     private int currentCarHealth;
+    public SpriteRenderer spriteRenderer;
+    public Sprite sprite2;
+    public Sprite sprite3;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,14 +33,31 @@ public class CarHp : MonoBehaviour
             Debug.Log("car has died");
             Destroy(gameObject);
         }
+
+
+        if (currentCarHealth == 5)
+        {
+            ChangeSprite(sprite2);
+
+        }
+        if (currentCarHealth == 2)
+        {
+            ChangeSprite(sprite3);
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("hit");
+        Debug.Log("hit");
         if (other.CompareTag("playerAttack"))
         {
             TakeDamage(1);
         }
+    }
+
+    void ChangeSprite(Sprite newSprite)
+    {
+        spriteRenderer.sprite = newSprite;
     }
 }
