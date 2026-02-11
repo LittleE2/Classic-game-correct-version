@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         // Set starting health
         currentHealth = maxHealth;
 
+
         if (healthSlider != null)
         {
             healthSlider.maxValue = maxHealth;
