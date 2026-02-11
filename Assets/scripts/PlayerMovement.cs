@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         // Set starting health
         currentHealth = maxHealth;
 
+
         if (healthSlider != null)
         {
             healthSlider.maxValue = maxHealth;
@@ -51,10 +52,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //void Awake()
+    //{
+    //    jump = playerActionMap.FindAction("Jump");
+    //    movement = playerActionMap.FindAction("Movement");
+    //}
+
+    //private void OnEnable()
+    //{
+    //    //jump.action.started += Jump;
+    //    Jump.performed += jump;
+    //    jump.canceled += Jump;
+    //    jump.Enable();
+
+    //}
+
+    //private void OnDisable()
+    //{
+    //    //jump.action.canceled -= Jump;
+
+    //}
+
     void Update()
     {
         //Debug.Log(moveDirection.x);
-        if (isDead) return;
+       // if (isDead) return;
 
         bool grounded = isGrounded();
 
@@ -99,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
     //if the jump input is pressed, check if the player is on the ground, if so, jump. 
     private void Jump(InputAction.CallbackContext context)
     {
-        if (isDead) return;
+        //if (isDead) return;
 
         if (isGrounded())
         {
@@ -176,6 +198,24 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+
+
+
+    //void Awake()
+    //{
+    //    jump.performed
+    //}
+
+    //private void OnEnable()
+    //{
+        
+    //}
+
+    //private void OnDisable()
+    //{
+        
+    //}
 
     //allows team to see the grounded check volume
     //private void OnDrawGizmosSelected()
