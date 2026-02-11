@@ -1,43 +1,40 @@
 fileFormatVersion: 2
-guid: 41777e2dfa477f44a8ee9891b7e0aebc
+guid: c77a2f45edfbae044a221893e801aebd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2089414241996454100
-    second: pixil-layer-portrait_0
+      213: 6246697207729184622
+    second: pixil-layer-portrait 1_0
   - first:
-      213: 4745802297227774969
-    second: pixil-layer-portrait_1
+      213: 752456171196409566
+    second: pixil-layer-portrait 1_1
   - first:
-      213: 1104799140403122203
-    second: pixil-layer-portrait_2
+      213: 4958039143110547365
+    second: pixil-layer-portrait 1_2
   - first:
-      213: 5976705167123393929
-    second: pixil-layer-portrait_3
+      213: -5996116762430061057
+    second: pixil-layer-portrait 1_3
   - first:
-      213: 4475626331745874263
-    second: pixil-layer-portrait_4
+      213: 3591892054134122393
+    second: pixil-layer-portrait 1_4
   - first:
-      213: 6861016445444610013
-    second: pixil-layer-portrait_5
+      213: 1532351513141227123
+    second: pixil-layer-portrait 1_5
   - first:
-      213: 4681666647271875667
-    second: pixil-layer-portrait_6
+      213: -1716703739670922664
+    second: pixil-layer-portrait 1_6
   - first:
-      213: 4763151304829554389
-    second: pixil-layer-portrait_7
+      213: -4619425232113148918
+    second: pixil-layer-portrait 1_7
   - first:
-      213: -2527396030604634642
-    second: pixil-layer-portrait_8
+      213: 363933995324508673
+    second: pixil-layer-portrait 1_8
   - first:
-      213: -4855484053702792
-    second: pixil-layer-portrait_9
+      213: -8317161787070155284
+    second: pixil-layer-portrait 1_9
   - first:
-      213: 159619745375381510
-    second: pixil-layer-portrait_10
-  - first:
-      213: -8706147236374949109
-    second: pixil-layer-portrait_11
+      213: -8544244475028747562
+    second: pixil-layer-portrait 1_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -79,7 +76,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -133,7 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixil-layer-portrait_0
+      name: pixil-layer-portrait 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d837d2de271ffc10800000000000000
-      internalID: 2089414241996454100
+      spriteID: e6f5f16930ab0b650800000000000000
+      internalID: 6246697207729184622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_1
+      name: pixil-layer-portrait 1_1
       rect:
         serializedVersion: 2
         x: 299
@@ -170,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fb8e748b0a7cd140800000000000000
-      internalID: 4745802297227774969
+      spriteID: ed66639a6e2417a00800000000000000
+      internalID: 752456171196409566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_2
+      name: pixil-layer-portrait 1_2
       rect:
         serializedVersion: 2
         x: 374
@@ -192,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1092e7f6f8055f00800000000000000
-      internalID: 1104799140403122203
+      spriteID: 5a71693f45e7ec440800000000000000
+      internalID: 4958039143110547365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_3
+      name: pixil-layer-portrait 1_3
       rect:
         serializedVersion: 2
         x: 464
@@ -214,14 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98da1adfea581f250800000000000000
-      internalID: 5976705167123393929
+      spriteID: ff54797c29389cca0800000000000000
+      internalID: -5996116762430061057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_4
+      name: pixil-layer-portrait 1_4
       rect:
         serializedVersion: 2
         x: 524
@@ -236,14 +233,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 751f8139f6e9c1e30800000000000000
-      internalID: 4475626331745874263
+      spriteID: 9976636eac6f8d130800000000000000
+      internalID: 3591892054134122393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_5
+      name: pixil-layer-portrait 1_5
       rect:
         serializedVersion: 2
         x: 614
@@ -258,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd7d6dc1b1a373f50800000000000000
-      internalID: 6861016445444610013
+      spriteID: 37ea0db1591044510800000000000000
+      internalID: 1532351513141227123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_6
+      name: pixil-layer-portrait 1_6
       rect:
         serializedVersion: 2
         x: 689
@@ -280,14 +277,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3542f6bd20f98f040800000000000000
-      internalID: 4681666647271875667
+      spriteID: 85a74545b0b0d28e0800000000000000
+      internalID: -1716703739670922664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_7
+      name: pixil-layer-portrait 1_7
       rect:
         serializedVersion: 2
         x: 779
@@ -302,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5decdcf10ec1a1240800000000000000
-      internalID: 4763151304829554389
+      spriteID: a0c5b65e93184efb0800000000000000
+      internalID: -4619425232113148918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_8
+      name: pixil-layer-portrait 1_8
       rect:
         serializedVersion: 2
         x: 854
@@ -324,36 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee5141d63b2ececd0800000000000000
-      internalID: -2527396030604634642
+      spriteID: 10a81016a04fc0500800000000000000
+      internalID: 363933995324508673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_9
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 374
-        width: 257
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87734c586ffbeeff0800000000000000
-      internalID: -4855484053702792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pixil-layer-portrait_10
+      name: pixil-layer-portrait 1_9
       rect:
         serializedVersion: 2
         x: 344
@@ -368,14 +343,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 608ec3e0055173200800000000000000
-      internalID: 159619745375381510
+      spriteID: ce5fa3ebb61839c80800000000000000
+      internalID: -8317161787070155284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixil-layer-portrait_11
+      name: pixil-layer-portrait 1_10
       rect:
         serializedVersion: 2
         x: 404
@@ -390,8 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b035f95373d8d2780800000000000000
-      internalID: -8706147236374949109
+      spriteID: 6da41d75beebc6980800000000000000
+      internalID: -8544244475028747562
       vertices: []
       indices: 
       edges: []
@@ -410,18 +385,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixil-layer-portrait_0: 2089414241996454100
-      pixil-layer-portrait_1: 4745802297227774969
-      pixil-layer-portrait_10: 159619745375381510
-      pixil-layer-portrait_11: -8706147236374949109
-      pixil-layer-portrait_2: 1104799140403122203
-      pixil-layer-portrait_3: 5976705167123393929
-      pixil-layer-portrait_4: 4475626331745874263
-      pixil-layer-portrait_5: 6861016445444610013
-      pixil-layer-portrait_6: 4681666647271875667
-      pixil-layer-portrait_7: 4763151304829554389
-      pixil-layer-portrait_8: -2527396030604634642
-      pixil-layer-portrait_9: -4855484053702792
+      pixil-layer-portrait 1_0: 6246697207729184622
+      pixil-layer-portrait 1_1: 752456171196409566
+      pixil-layer-portrait 1_10: -8544244475028747562
+      pixil-layer-portrait 1_2: 4958039143110547365
+      pixil-layer-portrait 1_3: -5996116762430061057
+      pixil-layer-portrait 1_4: 3591892054134122393
+      pixil-layer-portrait 1_5: 1532351513141227123
+      pixil-layer-portrait 1_6: -1716703739670922664
+      pixil-layer-portrait 1_7: -4619425232113148918
+      pixil-layer-portrait 1_8: 363933995324508673
+      pixil-layer-portrait 1_9: -8317161787070155284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
