@@ -32,10 +32,18 @@ public class PlayerMovement : MonoBehaviour
     private bool isDead = false;
     // =============================
 
+    //anims (again)
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
+    private float XPosLastFrame;
+    private bool wasGrounded;
+
+
     void Start()
     {
         // Set starting health
         currentHealth = maxHealth;
+
 
         if (healthSlider != null)
         {
@@ -44,11 +52,47 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //void Awake()
+    //{
+    //    jump = playerActionMap.FindAction("Jump");
+    //    movement = playerActionMap.FindAction("Movement");
+    //}
+
+    //private void OnEnable()
+    //{
+    //    //jump.action.started += Jump;
+    //    Jump.performed += jump;
+    //    jump.canceled += Jump;
+    //    jump.Enable();
+
+    //}
+
+    //private void OnDisable()
+    //{
+    //    //jump.action.canceled -= Jump;
+
+    //}
+
     void Update()
     {
         //Debug.Log(moveDirection.x);
-        if (isDead) return;
+       // if (isDead) return;
 
+        bool grounded = isGrounded();
+
+        if (!grounded)
+        {
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isRunning", false);
+        }
+        else if (!wasGrounded && grounded)
+        {
+            animator.SetBool("isJumping", false);
+        }
+
+        wasGrounded = grounded;
+
+        FlipCharacterX();
         movement();
     }
 
@@ -58,9 +102,16 @@ public class PlayerMovement : MonoBehaviour
         //left to right movement, reads the input and passes it into move direction which determines left or right, and multiplies by move speed. 
         moveDirection = move.action.ReadValue<Vector2>();
         body.linearVelocityX = moveDirection.x * moveSpeed;
-
-        //jump
-        jump.action.started += Jump;
+        if (body.linearVelocityX!=0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+            //jump
+            jump.action.started += Jump;
         body.freezeRotation = true;
 
         //close game
@@ -70,14 +121,26 @@ public class PlayerMovement : MonoBehaviour
     //if the jump input is pressed, check if the player is on the ground, if so, jump. 
     private void Jump(InputAction.CallbackContext context)
     {
-        if (isDead) return;
+        //if (isDead) return;
 
         if (isGrounded())
         {
             body.linearVelocity = Vector2.up * jumpStrength;
+            animator.SetBool("isJumping", true);
         }
     }
-
+    private void FlipCharacterX()
+    {
+        if (transform.position.x > XPosLastFrame)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (transform.position.x < XPosLastFrame)
+        {
+            spriteRenderer.flipX = true;
+        }
+        XPosLastFrame = transform.position.x;
+    }
     private void Close(InputAction.CallbackContext context)
     {
         Debug.Log("close game");
@@ -135,6 +198,24 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+
+
+
+    //void Awake()
+    //{
+    //    jump.performed
+    //}
+
+    //private void OnEnable()
+    //{
+        
+    //}
+
+    //private void OnDisable()
+    //{
+        
+    //}
 
     //allows team to see the grounded check volume
     //private void OnDrawGizmosSelected()

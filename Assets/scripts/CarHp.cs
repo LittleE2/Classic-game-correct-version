@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CarHp : MonoBehaviour
 {
-    public int CarMaxHealth = 9;
+    public int CarMaxHealth = 15;
     private int currentCarHealth;
     public SpriteRenderer spriteRenderer;
     public Sprite sprite2;
@@ -53,12 +53,12 @@ public class CarHp : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (currentCarHealth == 5)
+        if (currentCarHealth == 10)
         {
             ChangeSprite(sprite2);
         }
 
-        if (currentCarHealth == 2)
+        if (currentCarHealth == 5)
         {
             ChangeSprite(sprite3);
         }

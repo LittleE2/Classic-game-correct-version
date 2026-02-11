@@ -16,6 +16,8 @@ public class playerAttack : MonoBehaviour
     private float directionChange;
     private float attackDirection;
 
+    //animssecondround
+    [SerializeField] private Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,18 +48,25 @@ public class playerAttack : MonoBehaviour
         Kick.action.started += vAttack;
     }
 
-
+    public void FinishPunching()
+    {
+        animator.SetBool("isPunching", false);
+    }
+    public void FinishKicking()
+    {
+        animator.SetBool("isKicking", false);
+    }
     private void fAttack(InputAction.CallbackContext context)
     {
         GameObject punch = Instantiate(punchingPrefab, (transform.position + new Vector3(attackDirection, 1,0)), Quaternion.identity);
-
+        animator.SetBool("isPunching", true);
         //Debug.Log("Punch!");
     }
 
     private void vAttack(InputAction.CallbackContext context)
     {
         GameObject kick = Instantiate(kickingPrefab, (transform.position + new Vector3(attackDirection, -1, 0)), Quaternion.identity);
-
+        animator.SetBool("isKicking", true);
         //Debug.Log("Kick!");
     }
 }
